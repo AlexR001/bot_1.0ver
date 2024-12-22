@@ -19,18 +19,13 @@ def send_welcome(message):
     with open(f'img/musor/ava_ver1.jpeg', 'rb') as f:  
         bot.send_photo(message.chat.id, f, caption='''
 Привет! Я бот расскажу о проблеме загрязнения если стало интересно просто нажми.
-/graz''', reply_markup=markup)
+/graz''')
 
           
 
 # Обработчик команды '/graz'
 @bot.message_handler(commands=['graz'])
 def send_welcome(message):
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn1 = types.KeyboardButton("/dengi")
-    btn2 = types.KeyboardButton("/vreme")
-    btn3 = types.KeyboardButton("/problema")
-    markup.add(btn1, btn2, btn3)
     with open(f'img/musor/problema.jpeg', 'rb') as f:  
         bot.send_photo(message.chat.id, f, caption='''
 Я могу рассказать сколько денег можно получить от сдачи мусора просто нажми.
