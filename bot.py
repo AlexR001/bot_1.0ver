@@ -13,9 +13,6 @@ def send_welcome(message):
 /hello - /start,
 /graz - рассказывает про проблему мусора.''')
 
-
-
-
 # Обработчик команды '/start' и '/hello'
 @bot.message_handler(commands=['start', 'hello'])
 def send_welcome(message):
